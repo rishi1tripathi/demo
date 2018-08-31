@@ -1,0 +1,22 @@
+<!-- <h1>
+  Ticket Types
+</h1>
+  <div>
+      <table  style="width:100%">
+      <tr>
+          <th>Ticket Type</th>
+          <th>Description</th>
+          <th>Workflow</th>
+      </tr>
+      <tr *ngFor="let ticket of ticketTypeList">
+          <td> {{ ticket.ticketType }} </td>
+          <td> {{ ticket.description }} </td>
+          <td> {{ ticket.workFlow }} </td>
+          
+      </tr>
+      </table>
+  
+  </div>
+   -->
+
+   <ng2-smart-table [settings]="settings" [source]="source" ></ng2-smart-table>
