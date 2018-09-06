@@ -1,22 +1,38 @@
-<!-- <h1>
-  Ticket Types
-</h1>
-  <div>
-      <table  style="width:100%">
-      <tr>
-          <th>Ticket Type</th>
-          <th>Description</th>
-          <th>Workflow</th>
-      </tr>
-      <tr *ngFor="let ticket of ticketTypeList">
-          <td> {{ ticket.ticketType }} </td>
-          <td> {{ ticket.description }} </td>
-          <td> {{ ticket.workFlow }} </td>
-          
-      </tr>
-      </table>
-  
-  </div>
-   -->
+<div class="container">
+    <div class="row">
+        
+        <button type="button" class="btn btn-primary pull-right"  (click)="callCreate(ticketType,0)">Create Ticket Type 
+        </button>
+    </div>
+    <div class="row">
+    <table id="group">
 
-   <ng2-smart-table [settings]="settings" [source]="source" ></ng2-smart-table>
+         <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Ticket Type</th>
+                  <th>Description</th>
+                  <th>Workflow</th>
+                  <th>Active</th>
+                  <th>Edit</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ticket of ticketTypeList">
+                    <td>{{ ticket.id }}</td>
+                    <td>{{ ticket.ticketType }}</td>
+                    <td>{{ ticket.description }}</td>
+                    <td>{{ ticket.workFlow}}</td>
+                    <td>{{ ticket.archiveId }}</td> 
+                    <td>
+                        <i class="material-icons"
+                        (click)="callCreate(ticket,1)"
+                        >
+                            border_color
+                            </i>
+                    </td>
+            </tr>
+        </tbody>
+   </table>
+   </div>
+</div>

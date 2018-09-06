@@ -3,5 +3,17 @@ export class TicketType {
     ticketType: string;
     description: string;
     workFlow : string ;
-    archive :boolean ;
+    archiveId :string;
+
+
+
+  constructor (id :number, ticketType: string,description: string,workFlow : string ,archiveId :string)
+  {
+
+    this.id =id;
+    this.ticketType=ticketType;
+    this.description=description;
+    this.workFlow=workFlow;
+    this.archiveId=archiveId;
+  }
 }

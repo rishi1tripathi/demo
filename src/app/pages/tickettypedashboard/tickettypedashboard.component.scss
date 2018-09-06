@@ -1,0 +1,40 @@
+$color_1: white;
+$font_family_1: Poppins;
+$background_color_1: #ade5ec;
+$background_color_2: rgb(151, 204, 211);
+$background_color_3: #01c0c8;
+
+#group {
+	font-family: $font_family_1;
+	border-collapse: collapse;
+	width: 95%;
+	margin-top: 70px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	td {
+		border: 1px solid #ddd;
+		padding: 8px;
+		width: 50px;
+		height: 30px;
+	}
+	th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		width: 50px;
+		height: 30px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: center;
+		background-color: $background_color_3;
+		color: $color_1;
+	}
+	tr {
+		&:nth-child(even) {
+			background-color: $background_color_1;
+		}
+		&:hover {
+			background-color: $background_color_2;
+		}
+	}
+}
